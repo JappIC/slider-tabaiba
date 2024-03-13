@@ -1,24 +1,47 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+let nextDow = document.getElementById('next');
+let prevDow = document.getElementById('prev');
+let carrouselDom = document.querySelector('.slider-tabaiba');
+let listItemDom = document.querySelector('.slider-tabaiba .list');
+let thumbnailDom = document.querySelector('.slider-tabaiba .thumbnail');
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+nextDow.onclick = function(){
+    showSlider('next');    
+}
 
-setupCounter(document.querySelector('#counter'))
+prevDow.onclick = function(){
+    showSlider('prev');    
+}
+
+let timeRunning = 3000;
+let timeAutoNext = 7000;
+let runTimeOut;
+let runAutoRun = setTimeout(()=>{
+    nextDow.click();
+}, timeAutoNext);
+
+function showSlider(type) {
+    let itemSlider = document.querySelectorAll('.slider-tabaiba .list .item');
+    let itemThumbnail = document.querySelectorAll('.slider-tabaiba .thumbnail .item')
+
+    if (type === 'next') {
+        listItemDom.appendChild(itemSlider[0]);
+        thumbnailDom.appendChild(itemThumbnail[0]);
+        carrouselDom.classList.add('next');
+    } else {
+        let positionLastItem = itemSlider.length -1;
+        listItemDom.prepend(itemSlider[positionLastItem]);
+        thumbnailDom.prepend(itemThumbnail[positionLastItem]);
+        carrouselDom.classList.add('prev');
+    }
+
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(()=>{
+        carrouselDom.classList.remove('next');
+        carrouselDom.classList.remove('prev')
+    }, timeRunning);
+
+    clearTimeout(runAutoRun);
+    runTimeOut = setTimeout(()=>{
+        nextDow.click();
+    }, timeAutoNext);
+}

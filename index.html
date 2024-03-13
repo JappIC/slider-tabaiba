@@ -1,13 +1,139 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/style.css">
+        <title>Slider Tabaiba</title>
+    </head>
+
+    <body>
+        <section class="slider-tabaiba">
+            <div class="list">
+                <article class="item">
+                    <img src="/image/img1.jpg" alt="XXXXXXXX">
+                    <div class="content">
+                        <p class="author">Jonás</p>
+                        <h2 class="title">Bosque verde</h2>
+                        <h3 class="topic">Paisaje</h3>
+                        <p class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ratione sequi, accusantium repellendus inventore modi. Itaque soluta distinctio obcaecati voluptate sunt nisi similique qui quia, ducimus, commodi ab facere a!
+                        </p>
+                        <div class="buttons">
+                            <button>Ver más</button>
+                            <button>Suscríbete </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="/image/img2.jpg" alt="XXXXXXXX">
+                    <div class="content">
+                        <p class="author">Jonás</p>
+                        <h2 class="title">Bosque tormentoso</h2>
+                        <h3 class="topic">Paisaje</h3>
+                        <p class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ratione sequi, accusantium repellendus inventore modi. Itaque soluta distinctio obcaecati voluptate sunt nisi similique qui quia, ducimus, commodi ab facere a!
+                        </p>
+                        <div class="buttons">
+                            <button>Ver más</button>
+                            <button>Suscríbete </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="/image/img3.jpg" alt="XXXXXXXX">
+                    <div class="content">
+                        <p class="author">Jonás</p>
+                        <h2 class="title">Lago</h2>
+                        <h3 class="topic">Paisaje</h3>
+                        <p class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ratione sequi, accusantium repellendus inventore modi. Itaque soluta distinctio obcaecati voluptate sunt nisi similique qui quia, ducimus, commodi ab facere a!
+                        </p>
+                        <div class="buttons">
+                            <button>Ver más</button>
+                            <button>Suscríbete </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="item">
+                    <img src="/image/img4.jpg" alt="XXXXXXXX">
+                    <div class="content">
+                        <p class="author">Jonás</p>
+                        <h2 class="title">Otoño</h2>
+                        <h3 class="topic">Paisaje</h3>
+                        <p class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum ratione sequi, accusantium repellendus inventore modi. Itaque soluta distinctio obcaecati voluptate sunt nisi similique qui quia, ducimus, commodi ab facere a!
+                        </p>
+                        <div class="buttons">
+                            <button>Ver más</button>
+                            <button>Suscríbete </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="thumbnail">
+                
+                <div class="item">
+                    <img src="/image/img2.jpg" alt="Bosque tormentoso">
+                    <div class="content">
+                        <p class="title">
+                            Bosque tormentoso
+                        </p>
+                        <p class="des">
+                            Magnífico bosque con tormenta
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/image/img3.jpg" alt="Lago">
+                    <div class="content">
+                        <p class="title">
+                            Lago
+                        </p>
+                        <p class="des">
+                            Agua cristalina
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/image/img4.jpg" alt="Otoño">
+                    <div class="content">
+                        <p class="title">
+                            Otoño
+                        </p>
+                        <p class="des">
+                            Suelo forrado de hojas
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/image/img1.jpg" alt="Bosque verde">
+                    <div class="content">
+                        <p class="title">
+                            Bosque verde
+                        </p>
+                        <p class="des">
+                            Hermoso bosque húmedo
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+                <button id="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"/>
+                    </svg>
+                </button>
+                <button id="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <polygon points="7.293 4.707 14.586 12 7.293 19.293 8.707 20.707 17.414 12 8.707 3.293 7.293 4.707"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="time"></div>
+        </section>   
+        <script type="module" src="/main.js"></script>
+    </body>
+
 </html>
